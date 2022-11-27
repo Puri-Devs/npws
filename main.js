@@ -4,8 +4,6 @@
   const hour = minute * 60;
   const day = hour * 24;
 
-  // I'm adding this section so I don't have to keep updating this pen every year :-)
-  // remove this if you don't need it
   const today = new Date();
   let dd = String(today.getDate()).padStart(2, "0");
   let mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -18,7 +16,6 @@
   if (todayDate > birthday) {
     birthday = dayMonth + nextYear;
   }
-  // end
 
   const countDown = new Date(birthday).getTime();
   const x = setInterval(function () {
@@ -30,14 +27,12 @@
     document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
     document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
 
-    // do something later when date is reached
     if (distance < 0) {
       document.getElementById("headline").innerText = "website is open!";
       document.getElementById("countdown").style.display = "none";
       document.getElementById("content").style.display = "block";
       clearInterval(x);
     }
-    // seconds
   }, 0);
 
 }());
