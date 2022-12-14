@@ -1,23 +1,36 @@
-- name: Sync files
-  # You may pin to the exact commit or the version.
-  # uses: denis-tingaikin/sync-files@7cf3a71d4530214ecee324faf12cf884a275d366
-  uses: denis-tingaikin/sync-files@v1.0.2
-  with:
-    # The email of the committer.
-    git-author-email: gitbot@github.com
-    # The name of the committer.
-    git-author-name: GitBot
-    # The GitHub repository with which synchronizing.
-    sync-repository: https://github.com/Puri-Devs/pkgs
-    # The regex pattern for files that allowed to update. By default all files.
-    allow-files-pattern: # optional, default is .*
-    # 
-    sync-branch-name: # optional, default is main
-    # 
-    working-directory: # optional, default is 
-    # 
-    result-branch-name: # optional, default is 
-    # Space-separated paths of files that should be excluded from sync.
-    exclude-files: # optional, default is 
-    # The path to file in the destination repository that contains space-separated paths to files that should be excluded from sync.
-    sync-ignore-file-name: # optional, default is .syncignore
+name: 'Submodules Sync'
+
+on:
+  # Allows you to run this workflow manually from the Actions tab or through HTTP API
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: 'Submodules Sync'
+    runs-on: ubuntu-latest
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        token: ${{ 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 }}
+        submodules: true
+
+    # Update references
+    - name: Git Sumbodule Update
+      run: |
+        git pull --recurse-submodules
+        git submodule update --remote --recursive
+
+    - name: Commit update
+      run: |
+        git config --global user.name 'Git bot'
+        git config --global user.email 'bot@noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
