@@ -19,7 +19,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        token: ${{ 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 }}
+        token: ${{ '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' }}
         submodules: true
 
     # Update references
