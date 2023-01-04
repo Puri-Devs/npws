@@ -10,25 +10,42 @@
 </head>
 <body data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
     <div class="container-lg mt-3">
-        <nav class="d-inline-flex">
-            <div class="x-0 y-0">
-                <img src="" alt="logo">
-            </div>
-            <details class="details-reset details-overlay" open>
-                <summary class="btn" aria-haspopup="true">
-                    Product
-                </summary>
-                <div class="SelectMenu">
-                    <div class="SelectMenu-modal">
-                        <div class="SelectMenu-list">
-                            <button class="SelectMenu-item" role="menuitem">Server 1</button>
-                            <button class="SelectMenu-item" role="menuitem">Server 2</button>
-                            <button class="SelectMenu-item" role="menuitem">Server 3</button>
-                        </div>
-                    </div>
+        <nav class="clearfix">
+            <div class="float-left d-inline-flex">
+                <div class="x-0 y-0 subnav-spacer-right">
+                    <a href="/"><img src="" alt="logo"></a>
                 </div>
-            </details>
-
+                <div style="margin-bottom: 100px">
+                    <details class="dropdown details-reset details-overlay d-inline-block right-2">
+                        <summary class="btn" aria-haspopup="true">
+                            Product
+                            <div class="dropdown-caret"></div>
+                        </summary>
+                
+                        <ul class="dropdown-menu dropdown-menu-se">
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                        </ul>
+                    </details>
+                    <details class="dropdown details-reset details-overlay d-inline-block">
+                        <summary class="btn" aria-haspopup="true">
+                            FAQ
+                            <div class="dropdown-caret"></div>
+                        </summary>
+                
+                        <ul class="dropdown-menu dropdown-menu-se">
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+            <div class="float-right d-inline-flex">
+                <button class="btn right-3" type="button"><a href="login/">Log in</a></button>
+                <button class="btn" type="button"><a href="signup/">Sign up</a></button>
+            </div>
         </nav>
     </div>                      
 </body>
