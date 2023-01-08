@@ -4,27 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Net Puri Web Services</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="shortcut icon" href="https://i.imgur.com/2vLJzvv.png" type="image/x-icon">
+    <title>NPWS</title>
+    <!-- CSS -->
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet"/>
 </head>
-<body>
-    <div class="container">
-        <h1 id="headline">website will be open soon</h1>
-        <div id="countdown">
-            <ul>
-            <li><span id="days"></span>days</li>
-            <li><span id="hours"></span>hours</li>
-            <li><span id="minutes"></span>minutes</li>
-            <li><span id="seconds"></span>seconds</li>
-            </ul>
-        </div>
-        <div id="content" class="emoji">
-            <span>🥳</span>
-            <span>🎉</span>
-            <span>🎂</span>
-        </div>
-    </div>
-    <script src="assets/main.js"></script>
+<body data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+    <div class="container-lg mt-3">
+        <nav class="clearfix">
+            <div class="float-left d-inline-flex">
+                <div class="x-0 y-0 subnav-spacer-right">
+                    <a href="/"><img src="" alt="logo"></a>
+                </div>
+                <div style="margin-bottom: 100px">
+                    <details class="dropdown details-reset details-overlay d-inline-block right-2">
+                        <summary class="btn" aria-haspopup="true">
+                            Product
+                            <div class="dropdown-caret"></div>
+                        </summary>
+                
+                        <ul class="dropdown-menu dropdown-menu-se">
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                        </ul>
+                    </details>
+                    <details class="dropdown details-reset details-overlay d-inline-block">
+                        <summary class="btn" aria-haspopup="true">
+                            FAQ
+                            <div class="dropdown-caret"></div>
+                        </summary>
+                
+                        <ul class="dropdown-menu dropdown-menu-se">
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                            <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+            <div class="float-right d-inline-flex">
+                <button class="btn right-3" type="button"><a href="login/">Log in</a></button>
+                <button class="btn" type="button"><a href="signup/">Sign up</a></button>
+            </div>
+        </nav>
+    </div>                      
 </body>
 </html>

@@ -1,0 +1,18 @@
+{
+  "name": "npws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@primer/octicons": "^17.10.1",
+    "vite": "^4.0.4"
+  }
+}
