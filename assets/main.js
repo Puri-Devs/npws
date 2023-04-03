@@ -12,7 +12,7 @@
   let mm = String(today.getMonth() + 1).padStart(2, "0");
   const yyyy = today.getFullYear();
   const nextYear = yyyy + 1;
-  const dayMonth = "04/1/";
+  const dayMonth = "05/1/";
   let birthday = dayMonth + yyyy;
 
   const todayDate = mm + "/" + dd + "/" + yyyy;
