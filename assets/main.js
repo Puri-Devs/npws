@@ -31,7 +31,7 @@
     document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
 
     if (distance < 0) {
-      document.getElementById("headline").innerText = "website is open!";
+      document.getElementById("headline").innerText = "Opening in the near future";
       document.getElementById("countdown").style.display = "none";
       document.getElementById("content").style.display = "block";
       clearInterval(x);
