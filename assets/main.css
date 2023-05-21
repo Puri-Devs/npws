@@ -56,8 +56,7 @@ li span {
 }
 
 .emoji {
-    display: none;
-    padding: 1rem;
+    padding: 1rem 4px;
 }
 
 .emoji span {
