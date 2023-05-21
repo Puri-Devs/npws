@@ -1,6 +1,7 @@
 (function () {
   const myHeaders = new Headers();
   myHeaders.set('Access-Control-Allow-Origin', 'https://npws.online/');
+  twemoji.parse(document.body);
   
   const second = 1000;
   const minute = second * 60;
